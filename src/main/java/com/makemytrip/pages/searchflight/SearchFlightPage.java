@@ -26,6 +26,9 @@ public class SearchFlightPage extends AppHomePage {
 	@FindBy(xpath = "//label[contains(@for,'departure')]")
 	WebElement departureDateCurrent_WE;
 
+	@FindBy(xpath = "//li[contains(.,'Senior Citizen  FaresSenior Citizen FaresOnly')]")
+	WebElement seniorCitizen_RBTN;
+
 	@FindBy(xpath = "//a[contains(.,'Search')]")
 	WebElement search_BTN;
 
@@ -33,12 +36,24 @@ public class SearchFlightPage extends AppHomePage {
 
 	public void click_On_search_with_default_data() {
 		if (loginSignUpForBestPrices_WE.isDisplayed() == true) {
-			JavascriptExecutor executor = (JavascriptExecutor)appHomePage.getDriver();
+			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
 			executor.executeScript("arguments[0].click();", search_BTN);
 		} else {
-			JavascriptExecutor executor = (JavascriptExecutor)appHomePage.getDriver();
+			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
 			executor.executeScript("arguments[0].click();", search_BTN);
 		}
+	}
+
+	public void select_roundtrip_option() {
+
+		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
+		executor.executeScript("arguments[0].click();", roundTrip_RBTN);
+	}
+	
+	public void select_senior_citizen_option() {
+		
+		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
+		executor.executeScript("arguments[0].click();", seniorCitizen_RBTN);
 	}
 
 }

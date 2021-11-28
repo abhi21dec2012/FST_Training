@@ -14,7 +14,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		,features= {"features"}
 		,glue = {"com.makemytrip.stedefinations"}
 		//,dryRun = true
-		,tags="@SearchOneWayFlight"
+		,tags="@SearchFlights"
 		)
 public class TestRunner {
 

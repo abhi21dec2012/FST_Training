@@ -1,4 +1,4 @@
-@SearchOneWayFlight
+@SearchFlights
 Feature: Search One Way Flight
   @SearchOneWayFlightWithDefaultData
   Scenario: Search One Way Flight With The Deafult Data
