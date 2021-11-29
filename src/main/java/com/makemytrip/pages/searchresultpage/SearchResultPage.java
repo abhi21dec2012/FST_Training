@@ -18,31 +18,45 @@ public class SearchResultPage extends AppHomePage {
 
 	@FindBy(xpath = "//b[contains(.,'Showing itineraries with special fares  for Senior Citizens.')]")
 	WebElement seniroCitizenFaresBanner_WE;
-	
+
 	@FindBy(xpath = "//b[contains(.,'Showing itineraries with special fares for the Students.')]")
 	WebElement studentFaresBanner_WE;
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to verify the Search Result Page
+	 */
 	public void verify_search_result_should_be_displayed() {
 
-		if (flightFromAndTo_WE.isDisplayed() == true) {
+		if (isElementDisplayed(flightFromAndTo_WE) == true) {
 			assertTrue(true);
 		} else {
 			assertFalse(false);
 		}
 	}
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to verify the Search Result Page for round
+	 *           trip
+	 */
 	public void verify_search_result_for_round_trip_should_be_displayed() {
 
-		if ((flightsForRoundTrip_WE.isDisplayed() && (seniroCitizenFaresBanner_WE.isDisplayed()) == true)) {
+		if ((isElementDisplayed(flightsForRoundTrip_WE) && (isElementDisplayed(seniroCitizenFaresBanner_WE)) == true)) {
 			assertTrue(true);
 		} else {
 			assertFalse(false);
 		}
 	}
-	
+
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to verify the Search Result Page for
+	 *           flights in given time period
+	 */
 	public void verify_search_result_for_round_trip_should_be_displayed_for_students_withintimeperiod() {
 
-		if ((flightsForRoundTrip_WE.isDisplayed() && (studentFaresBanner_WE.isDisplayed()) == true)) {
+		if ((isElementDisplayed(flightsForRoundTrip_WE) && (isElementDisplayed(studentFaresBanner_WE)) == true)) {
 			assertTrue(true);
 		} else {
 			assertFalse(false);

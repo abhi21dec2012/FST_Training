@@ -28,10 +28,10 @@ public class SearchFlightPage extends AppHomePage {
 
 	@FindBy(xpath = "//li[contains(.,'Senior Citizen  FaresSenior Citizen FaresOnly')]")
 	WebElement seniorCitizen_RBTN;
-	
+
 	@FindBy(xpath = "//li[contains(.,'Student  FaresStudent FaresOnly students above 12 years of age are eligible for')]")
 	WebElement studentsFares_RBTN;
-	
+
 	@FindBy(xpath = "//a[contains(.,'Search')]")
 	WebElement search_BTN;
 
@@ -49,42 +49,54 @@ public class SearchFlightPage extends AppHomePage {
 
 	AppHomePage appHomePage;
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to click on Search button
+	 */
 	public void click_On_search_with_default_data() {
 		if (loginSignUpForBestPrices_WE.isDisplayed() == true) {
-			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-			executor.executeScript("arguments[0].click();", search_BTN);
+			javaScriptClickOn(search_BTN);
 		} else {
-			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-			executor.executeScript("arguments[0].click();", search_BTN);
+			javaScriptClickOn(search_BTN);
 		}
 	}
-	
+
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to click on Search button
+	 */
 	public void click_On_search_with_selected_data() {
 		if (loginSignUpForBestPrices_WE.isDisplayed() == true) {
-			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-			executor.executeScript("arguments[0].click();", search_BTN);
+			javaScriptClickOn(search_BTN);
 		} else {
-			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-			executor.executeScript("arguments[0].click();", search_BTN);
+			javaScriptClickOn(search_BTN);
 		}
 	}
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to select Round trip radio button
+	 */
 	public void select_roundtrip_option() {
-
-		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-		executor.executeScript("arguments[0].click();", roundTrip_RBTN);
+		javaScriptClickOn(roundTrip_RBTN);
 	}
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to select Senior citizen radio button
+	 */
 	public void select_senior_citizen_option() {
 
-		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-		executor.executeScript("arguments[0].click();", seniorCitizen_RBTN);
+		javaScriptClickOn(seniorCitizen_RBTN);
 	}
 
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to close on pop up banner
+	 */
 	public void click_On_close_pop_up_banner() {
 		if (weAreNowAvailablePopUpClose_BTN.isDisplayed() == true) {
-			JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-			executor.executeScript("arguments[0].click();", weAreNowAvailablePopUpClose_BTN);
+			javaScriptClickOn(weAreNowAvailablePopUpClose_BTN);
 		} else {
 
 		}
@@ -94,26 +106,32 @@ public class SearchFlightPage extends AppHomePage {
 
 	}
 
-	public void select_dearture_and_return_date() {
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to select departure and return dates
+	 */
+	public void select_departure_and_return_date() {
 
-		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-		executor.executeScript("arguments[0].click();", deaprtureDate_BTN);
+		javaScriptClickOn(deaprtureDate_BTN);
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 		}
-		executor.executeScript("arguments[0].click();", departureDate_WE);
+		javaScriptClickOn(departureDate_WE);
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 		}
-		executor.executeScript("arguments[0].click();", returnDate_WE);
+		javaScriptClickOn(returnDate_WE);
 	}
-	
-	public void select_studnets_fare_option() {
 
-		JavascriptExecutor executor = (JavascriptExecutor) appHomePage.getDriver();
-		executor.executeScript("arguments[0].click();", studentsFares_RBTN);
+	/**
+	 * @author Abhinav Srivastava
+	 * @implNote This function will used to select Students fare radio button
+	 */
+	public void select_students_fare_option() {
+
+		javaScriptClickOn(studentsFares_RBTN);
 	}
 
 }

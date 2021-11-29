@@ -1,5 +1,5 @@
 @SearchFlights
-Feature: Search One Way Flight
+Feature: Search Round Trip flights for Senior Citizens fares
 
   @SearchRoundTripFlightsForSeniorCitizens
   Scenario: Search Round trip flights for the Senior citizens with default data

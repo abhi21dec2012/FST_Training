@@ -13,12 +13,12 @@ public class SearchRoundFlightsForStudnetsWithinTimePeriodSteps extends BaseTest
 	
 	@Step
 	public void searching_flight_with_given_time_period() {
-		searchFlightPage.select_dearture_and_return_date();
+		searchFlightPage.select_departure_and_return_date();
 	}
 	
 	@Step
 	public void selecting_option_for_students_fares(){
-		searchFlightPage.select_studnets_fare_option();
+		searchFlightPage.select_students_fare_option();
 	}
 	
 	@Step
