@@ -3,7 +3,6 @@ package com.makemytrip.stedefinations;
 import com.makemytrip.steps.SearchFlightResultSteps;
 import com.makemytrip.steps.SearchOneWayFlightWithDefaultDataSteps;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;

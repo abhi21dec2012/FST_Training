@@ -1,5 +1,5 @@
 @SearchFlights
-Feature: Search One Way Flight
+Feature: Search Round Trip flights for Student fares within given dates
 
   @SearchRoundTripFlightsForStudentsWithinDates
   Scenario: Search Round trip flights for the Students within given time period
