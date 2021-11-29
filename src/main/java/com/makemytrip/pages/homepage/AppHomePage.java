@@ -10,6 +10,10 @@ public class AppHomePage extends BasePage {
 
 	@FindBy(xpath = "//p[contains(.,'Login or Create Account')]")
 	WebElement loginOrCreateAccount_BTNWE;
+	
+	@FindBy(xpath = "//span[@class='langCardClose']")
+	WebElement weAreNowAvailablePopUpClose_BTNWE;
+	
 
 	public void clickOnLoginOrCreateAccount() {
 		loginOrCreateAccount_BTNWE.click();
