@@ -172,7 +172,11 @@ public class BasePage extends PageObject {
 	}
 
 	/**
-	 * Generate Random Numeric String of length
+	 *@author Abhinav Srivastava
+	 * @implNote This method is used to generate random number
+	 * 
+	 * @param character length in integer format
+	 * @return random number in integer format
 	 */
 	public static String generateRandomNumber(int charLength) {
 		return String.valueOf(charLength < 1 ? 0
