@@ -1,4 +1,4 @@
-package com.makemytrip.test;
+package com.makemytrip.runnerfile;
 
 import org.junit.runner.RunWith;
 
@@ -11,11 +11,11 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 				"html:target/cucumber/cucumber-html-report",
 				"json:target/cucumber/cucumber.json"
 				}
-		,features= {"features"}
+		,features= {"features/makemytrip"}
 		,glue = {"com.makemytrip.stedefinations"}
 		//,dryRun = true
 		,tags="@SearchFlights"
 		)
-public class TestRunner {
+public class MakeMyTripTestRunner {
 
 }
