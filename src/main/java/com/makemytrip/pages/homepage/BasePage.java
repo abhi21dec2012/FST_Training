@@ -172,7 +172,7 @@ public class BasePage extends PageObject {
 	}
 
 	/**
-	 *@author Abhinav Srivastava
+	 * @author Abhinav Srivastava
 	 * @implNote This method is used to generate random number
 	 * 
 	 * @param character length in integer format
